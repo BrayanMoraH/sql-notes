@@ -1,1 +1,3 @@
 
+##Create the docker file
+docker-compose up -d
