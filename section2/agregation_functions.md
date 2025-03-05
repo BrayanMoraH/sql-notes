@@ -44,3 +44,24 @@ when we have a table like this:
 | Charlie   | 4600  | Chicago    |
 
 
+### Having command
+
+The **HAVING** clause in SQL is used to filter the results of a **GROUP BY** agregation. It allows you to apply conditions to aggregated value, similar to how the **WHERE** clause filters individual rows before aggregation
+
+Example:
+
+`SELECT COUNT(*), country FROM users GROUP BY country HAVING count(*) > 5;`
+
+### Distinc
+
+This clause help us to avoid repeated values in a query.
+
+Example:
+
+`SELECT DISTINCT country from users;`
+
+`SELECT count(*), SUBSTRING(email, POSITION('@' in email) + 1 ) as domain 
+FROM users
+GROUP BY SUBSTRING(email, POSITION('@' in email) + 1 )
+HAVING count(*) > 1;`
+
